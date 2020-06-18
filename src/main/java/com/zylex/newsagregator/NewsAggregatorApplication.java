@@ -1,5 +1,6 @@
 package com.zylex.newsagregator;
 
+import com.zylex.newsagregator.service.BnkParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,5 +19,6 @@ public class NewsAggregatorApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        context.getBean(BnkParser.class).parse();
     }
 }
